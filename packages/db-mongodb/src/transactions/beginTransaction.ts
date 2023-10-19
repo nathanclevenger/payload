@@ -7,7 +7,9 @@ import { v4 as uuid } from 'uuid'
 
 let transactionsNotAvailable: boolean
 export const beginTransaction: BeginTransaction = async function beginTransaction(
-  options: TransactionOptions = {},
+  options: TransactionOptions = {
+    readPreference: 'primary',
+  },
 ) {
   let id = null
   if (!this.connection) {

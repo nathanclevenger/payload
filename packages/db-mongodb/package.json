@@ -1,7 +1,7 @@
 {
-  "name": "@payloadcms/db-mongodb",
-  "version": "1.0.3",
-  "description": "The officially supported MongoDB database adapter for Payload",
+  "name": "@nathanclevenger/db-mongodb",
+  "version": "0.0.4",
+  "description": "Unofficial MongoDB database adapter for Payload to support `readPreference=nearest`",
   "repository": "https://github.com/payloadcms/payload",
   "license": "MIT",
   "homepage": "https://payloadcms.com",
@@ -12,6 +12,7 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "access": "public",
   "scripts": {
     "build": "pnpm build:swc && pnpm build:types",
     "build:swc": "swc ./src -d ./dist --config-file .swcrc",
@@ -38,7 +39,8 @@
   "publishConfig": {
     "main": "./dist/index.js",
     "registry": "https://registry.npmjs.org/",
-    "types": "./dist/index.d.ts"
+    "types": "./dist/index.d.ts",
+    "access": "public"
   },
   "files": [
     "dist",

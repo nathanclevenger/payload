@@ -1,30 +1,7 @@
 # Payload MongoDB Adapter
 
-Official MongoDB adapter for [Payload](https://payloadcms.com).
+This is an unnoficial MongoDB adapter for Payload. It is not yet ready for production use.  It is currently being developed
+to support `readPrefence=nearest` for local reads, which is incompatible with the official MongoDB adapter that required `readPreference=primary` to support transactions.
 
-- [Main Repository](https://github.com/payloadcms/payload)
-- [Payload Docs](https://payloadcms.com/docs)
 
-## Installation
-
-```bash
-npm install @payloadcms/db-mongodb
-```
-
-## Usage
-
-```ts
-import { buildConfig } from 'payload/config'
-import { mongooseAdapter } from '@payloadcms/db-mongodb'
-
-export default buildConfig({
-  db: mongooseAdapter({
-    url: process.env.DATABASE_URI,
-  }),
-  // ...rest of config
-})
-
-```
-
-More detailed usage can be found in the [Payload Docs](https://payloadcms.com/docs/configuration/overview).
 
